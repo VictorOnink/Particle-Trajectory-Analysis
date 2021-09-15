@@ -10,8 +10,8 @@ for ((JOB_ID=0; JOB_ID<=11; JOB_ID++)); do
   part8="#SBATCH --partition=epyc2"
   part9='#SBATCH --qos=job_epyc2'
   part10="source /storage/homefs/vo18e689/.bash_profile"
-  part11="source /storage/homefs/vo18e689/anaconda3/bin/activate py3_parcels"
-  part12='cd "/storage/homefs/vo18e689/codes/Next-Stage-Plastic-Beaching/"'
+  part11="source /storage/homefs/vo18e689/anaconda3/bin/activate videotracking"
+  part12='cd "/storage/homefs/vo18e689/PauProject/Particle-Trajectory-Analysis/"'
   part13="python src/main.py -p 10 -v"
   for i in {1..13}; do
     partGrab="part"$i

@@ -28,7 +28,11 @@ class particle_tracking:
     def batch_feature_locator(self, frame_number=800):
         print('Looping through the frames to identify the features')
         tp.quiet()
-        return tp.batch(self.video_frames[:frame_number], diameter=self.feature_size_pixels, minmass=self.feature_mass_cutoff)
+        if frame_number is not None:
+            frames = self.video_frames[:frame_number]
+        else:
+            frames = self.video_frames
+        return tp.batch(frames, diameter=self.feature_size_pixels, minmass=self.feature_mass_cutoff)
 
     def feature_linking(self, feature_dateframe):
         print('Linking the features')
@@ -62,3 +66,7 @@ def grayscale_filename(file_name, index):
 
 def linked_trajectory_file_name(file_name):
     return settings.OUTPUT_DIREC + file_name.split('Data/')[1].split('.mp4')[0] + '_linked_trajectories'
+
+
+def unlinked_trajectory_file_name(file_name):
+    return settings.OUTPUT_DIREC + file_name.split('Data/')[1].split('.mp4')[0] + '_unlinked_trajectories'

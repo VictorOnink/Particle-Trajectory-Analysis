@@ -1,5 +1,5 @@
 #!/bin/sh
-for ((JOB_ID=0; JOB_ID<=0; JOB_ID++)); do
+for ((JOB_ID=0; JOB_ID<=11; JOB_ID++)); do
   export JOB_ID
   part1="#!/bin/sh"
   part2="#SBATCH --mail-type=begin,end,fail"
@@ -7,9 +7,9 @@ for ((JOB_ID=0; JOB_ID<=0; JOB_ID++)); do
   part4="#SBATCH --job-name=job"$JOB_ID
   part5="#SBATCH --output="runOutput/"job"$JOB_ID".o%j"
   part6="#SBATCH --mem-per-cpu=40G"
-  part7="#SBATCH --time=00:19:00"
+  part7="#SBATCH --time=05:00:00"
   part8="#SBATCH --partition=epyc2"
-  part9='#SBATCH --qos=job_epyc2_debug'
+  part9='#SBATCH --qos=job_epyc2'
   part10="source /storage/homefs/vo18e689/.bash_profile"
   part11="source /storage/homefs/vo18e689/anaconda3/bin/activate videotracking"
   part12='cd "/storage/homefs/vo18e689/PauProject/Particle-Trajectory-Analysis/"'

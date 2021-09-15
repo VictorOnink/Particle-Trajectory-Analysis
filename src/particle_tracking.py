@@ -50,6 +50,7 @@ def convert_frame_to_grayscale(video_frame):
 def convert_video_to_grayscale_frames(file_name):
     gray_scale_direc = file_name.split('Schwarz')[0] + file_name.split('/Data/')[1].split('.mp4')[0] + '/'
     if not utils.check_direc_exist(gray_scale_direc):
+        print('creating the greyscale png files of the frames')
         utils.check_direc_exist(gray_scale_direc, create_direc=True)
         reader = imageio.get_reader(file_name)
         for image_index, image in enumerate(reader):

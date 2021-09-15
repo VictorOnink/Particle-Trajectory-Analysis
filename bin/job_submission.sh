@@ -1,5 +1,6 @@
 #!/bin/sh
 for ((JOB_ID=0; JOB_ID<=0; JOB_ID++)); do
+  export JOB_ID
   part1="#!/bin/sh"
   part2="#SBATCH --mail-type=begin,end,fail"
   part3="#SBATCH --mail-user=victor.onink@climate.unibe.ch"

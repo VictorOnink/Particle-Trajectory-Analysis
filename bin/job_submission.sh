@@ -6,7 +6,7 @@ for ((JOB_ID=0; JOB_ID<=0; JOB_ID++)); do
   part4="#SBATCH --job-name="$runname
   part5="#SBATCH --output="runOutput/$runname".o%j"
   part6="#SBATCH --mem-per-cpu=40G"
-  part7="#SBATCH --time=02:00:00"
+  part7="#SBATCH --time=00:19:00"
   part8="#SBATCH --partition=epyc2"
   part9='#SBATCH --qos=job_epyc2_debug'
   part10="source /storage/homefs/vo18e689/.bash_profile"

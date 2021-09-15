@@ -50,6 +50,7 @@ def convert_frame_to_grayscale(video_frame):
 
 def convert_video_to_grayscale_frames(file_name):
     gray_scale_direc = file_name.split('Schwarz')[0] + file_name.split('/Data/')[1].split('.mp4')[0] + '/'
+    os.system('echo "The data is in {}"'.format(gray_scale_direc))
     if not utils.check_direc_exist(gray_scale_direc):
         os.system('echo "creating the greyscale png files of the frames"')
         utils.check_direc_exist(gray_scale_direc, create_direc=True)

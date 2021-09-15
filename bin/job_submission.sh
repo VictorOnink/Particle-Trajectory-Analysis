@@ -1,13 +1,13 @@
 #!/bin/sh
-for ((JOB_ID=0; JOB_ID<=11; JOB_ID++)); do
+for ((JOB_ID=0; JOB_ID<=0; JOB_ID++)); do
   part1="#!/bin/sh"
   part2="#SBATCH --mail-type=begin,end,fail"
   part3="#SBATCH --mail-user=victor.onink@climate.unibe.ch"
   part4="#SBATCH --job-name="$runname
   part5="#SBATCH --output="runOutput/$runname".o%j"
   part6="#SBATCH --mem-per-cpu=40G"
-  part7="#SBATCH --time=01:00:00"
-  part8="#SBATCH --partition=epyc2"
+  part7="#SBATCH --time=02:00:00"
+  part8="#SBATCH --partition=epyc2_debug"
   part9='#SBATCH --qos=job_epyc2'
   part10="source /storage/homefs/vo18e689/.bash_profile"
   part11="source /storage/homefs/vo18e689/anaconda3/bin/activate videotracking"

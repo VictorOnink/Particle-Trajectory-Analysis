@@ -1,6 +1,5 @@
 import os
 import pickle
-import numpy as np
 
 
 def save_obj(filename, item):
@@ -46,6 +45,12 @@ def remove_file(conduct: bool, file_name: str):
 
 
 def check_direc_exist(direc: str, create_direc=False):
+    """
+    Check if a directory exists. If it doesn't and create_direc == True, create the directory
+    :param direc:
+    :param create_direc:
+    :return:
+    """
     if not create_direc:
         return os.path.isdir(direc)
     if create_direc:

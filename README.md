@@ -1,4 +1,4 @@
-# Particle-Trajectory Analysis
+# Particle-Trajectory-Analysis
  
 Code to identify, track, analyse and visualize particle trajectories from video files for various 3D print shapes for Bernal et al. (in prep). The code was written by Victor Onink in consultation with Paulina Nunez Bernal.
 

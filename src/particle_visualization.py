@@ -39,4 +39,4 @@ class particle_visualization:
                 color_index = color_index_list.pop(np.random.randint(len(color_index_list)))
                 p_id_data = linked_dataframe[linked_dataframe['particle'] == p_id].reset_index(drop=True)
                 ax.plot(p_id_data.x * self.pixel_to_mm, p_id_data.y * self.pixel_to_mm, '-', c=colors[color_index])
-        plt.savefig(settings.FIGURE_DIREC + '{}.png'.format(self.title), bbox_inches='tight')
+        plt.savefig(settings.FIGURE_DIREC + '{}.png'.format(self.title), bbox_inches='tight', dpi=300)

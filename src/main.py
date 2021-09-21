@@ -25,7 +25,7 @@ else:
     def run():
         v_x, weights = np.array([]), np.array([])
         linked_dataframe_list = []
-        for video_id in [6, 7, 8]:
+        for video_id in [11]:
             file_name = settings.DATA_DIREC + settings.VIDEO_LIST[video_id]
             print(settings.VIDEO_LIST[video_id])
             tracking = particle_tracking.particle_tracking(file_name=file_name)

@@ -33,7 +33,7 @@ class particle_analysis:
             below_threshold = vx < 0.01  # mm/s
             keep_data = True
             for start, stop in contiguous_regions(below_threshold):
-                if stop - start > 25:
+                if stop - start > self.fps:
                     keep_data = False
                     break
             if keep_data:

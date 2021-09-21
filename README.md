@@ -14,4 +14,5 @@ The repository contains the following directories:
  - `src/utils.py`: Contains a number of simple utility functions
  - `src/utils_filenames.py`: Contains functions for setting the file names of various intermediate output.
  - `src/settings.py`: Contains a number of basic analysis parameters, such as directory paths and a list of all video files.
+
 More detailed documentation of each function is contained within the respective files.

@@ -1,6 +1,6 @@
 # Particle-Trajectory-Analysis
  
-Code to identify, track, analyse and visualize particle trajectories from video files for various 3D print shapes for Bernal et al. (in review). The code was written by Victor Onink in consultation with Paulina Nunez Bernal.
+Code to identify, track, analyse and visualize particle trajectories from video files for various 3D print shapes for [Bernal et al. (2022)](https://doi.org/10.1002/adma.202110054). The code was written by Victor Onink in consultation with Paulina Nunez Bernal.
 
 The particle identification and feature linking into particle trajectories was done by the [Crocker & Grier (1996)](https://doi.org/10.1006/jcis.1996.0217) algorithm using [trackpy v0.5.0](https://doi.org/10.5281/zenodo.4682814).
 
